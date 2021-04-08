@@ -29,11 +29,23 @@ public class DataLoader implements ApplicationRunner{
         Customer David = new Customer("David", "Kingussie", 24);
         customerRepository.save(David);
 
-        Customer Alex = new Customer("Alex", "Glasgow", 24);
+        Customer Alex = new Customer("Alex", "Glasgow", 31);
         customerRepository.save(Alex);
+
+        Customer Juan = new Customer("Juan", "Glasgow", 44);
+        customerRepository.save(Juan);
+
+        Customer John = new Customer("John", "Glasgow", 45);
+        customerRepository.save(John);
+
+        Customer Harrison = new Customer("Harrison", "Kingussie", 45);
+        customerRepository.save(Harrison);
 
         Course Java = new Course("Java101", "Glasgow", 8);
         courseRepository.save(Java);
+
+        Course JavaScript = new Course("JavaScript101", "Glasgow", 8);
+        courseRepository.save(JavaScript);
 
         Course Python = new Course("Python101", "Kingussie", 5);
         courseRepository.save(Python);
@@ -43,5 +55,14 @@ public class DataLoader implements ApplicationRunner{
 
         Booking booking2 = new Booking("12/1/2021", Python, David);
         bookingRepository.save(booking2);
+
+        Booking booking3 = new Booking("13/1/2021", Java, Juan);
+        bookingRepository.save(booking3);
+
+        Booking booking4 = new Booking("15/1/2021", JavaScript, John);
+        bookingRepository.save(booking4);
+
+        Booking booking5 = new Booking("12/1/2021", Java, Harrison);
+        bookingRepository.save(booking5);
     }
 }

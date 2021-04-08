@@ -15,11 +15,8 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
-
     private String town;
-
     private int age;
 
     @OneToMany(mappedBy = "customer")
@@ -33,9 +30,7 @@ public class Customer {
         this.bookings = new ArrayList<>();
     }
 
-    public Customer(){
-
-    }
+    public Customer(){}
 
     public Long getId() {
         return id;
